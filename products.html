@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vestido Floral - Loja Oxente Maria</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Detalhes do Produto</title>
+    body {
+  <style>
+    body {
+      position: relative;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .blur-background {
+      position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(255,255,255,0.6);backdrop-filter:blur(8px);z-index:-1;
+    }
+  </style>
+      position: relative;
+      min-height: 100vh;
+  <div class="blur-background"></div>
+  <div id="product-details" class="product-details-container"></div>
+  <script>
+  // Dados dos produtos
+  const produtos = {
+    'vestido-floral': {
+      nome: 'Vestido Floral',
+      descricao: 'Vestido leve, perfeito para o verão. Tecido confortável e estampa floral vibrante.',
+      preco: 'R$ 120,00',
+      imagens: ['media/vestido-floral1.jpg', 'media/vestido-floral2.jpg'],
+      especificacoes: [
+        'Tamanhos: P, M, G',
+        'Material: Algodão',
+        'Cor: Floral'
+      ]
+    },
+    'camisa-linho': {
+      nome: 'Camisa de Linho',
+      descricao: 'Camisa elegante de linho, ideal para ocasiões formais e casuais.',
+      preco: 'R$ 90,00',
+      imagens: ['media/camisa-linho1.jpg'],
+      especificacoes: [
+        'Tamanhos: P, M, G',
+        'Material: Linho',
+        'Cor: Bege'
+      ]
+    },
+     'Cropped': {
+      nome: 'Camisa de Linho',
+      descricao: 'Camisa elegante de linho, ideal para ocasiões formais e casuais.',
+      preco: 'R$ 90,00',
+      imagens: ['media/camisa-linho1.jpg'],
+      especificacoes: [
+        'Tamanhos: P, M, G',
+        'Material: Linho',
+        'Cor: Bege'
+      ]
+    },
+         'Macacão': {
+      nome: 'Camisa de Linho',
+      descricao: 'Camisa elegante de linho, ideal para ocasiões formais e casuais.',
+      preco: 'R$ 90,00',
+      imagens: ['media/camisa-linho1.jpg'],
+      especificacoes: [
+        'Tamanhos: P, M, G',
+        'Material: Linho',
+        'Cor: Bege'
+      ]
+    },
+         'camisa': {
+      nome: 'Camisa de Linho',
+      descricao: 'Camisa elegante de linho, ideal para ocasiões formais e casuais.',
+      preco: 'R$ 90,00',
+      imagens: ['media/camisa-linho1.jpg'],
+      especificacoes: [
+        'Tamanhos: P, M, G',
+        'Material: Linho',
+        'Cor: Bege'
+      ]
+    },
+    // Adicione mais produtos conforme necessário
+    // Adicione mais produtos conforme necessário
+  };
+
+  // Função para obter parâmetro da URL
+  function getParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  // Renderizar detalhes do produto
+  function renderProductDetails() {
+    const id = getParam('id');
+    const produto = produtos[id];
+    const container = document.getElementById('product-details');
+    if (!produto) {
+      container.innerHTML = '<h2>Produto não encontrado.</h2>';
+      return;
+    }
+    container.innerHTML = `
+      <h1>${produto.nome}</h1>
+      <div class="product-images">
+        ${produto.imagens.map(img => `<img src="${img}" alt="${produto.nome}">`).join('')}
+      </div>
+      <p>${produto.descricao}</p>
+      <ul>
+        ${produto.especificacoes.map(e => `<li>${e}</li>`).join('')}
+      </ul>
+      <h3>${produto.preco}</h3>
+      <a href="catalogo.html" class="btn">Voltar ao Catálogo</a>
+    `;
+  }
+
+  renderProductDetails();
+  </script>
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .galeria img {
+      width: 320px;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      background: #fff;
+    }
+    .especificacoes {
+      max-width: 600px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+    .especificacoes h2 {
+      margin-bottom: 18px;
+      font-size: 2em;
+      color: #c0392b;
+    }
+    .especificacoes ul {
+      margin-bottom: 18px;
+      padding-left: 20px;
+    }
+    .especificacoes li {
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
+    .voltar {
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 16px;
+      transition: background 0.2s;
+    }
+    .voltar:hover {
+      background: #a93226;
+    }
+    nav.menu {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    nav.menu a {
+      text-decoration: none;
+      color: #c0392b;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    nav.menu a:hover {
+      color: #a93226;
+    }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="catalog.html">Catálogo</a>
+    <a href="contact.html">Contato</a>
+    <a href="about.html">Sobre</a>
+  </nav>
+  <div class="produto-detalhe">
+    <div class="galeria">
+      <img src="IMG CACT.jpeg" alt="Vestido Floral - Foto 1">
+      <img src="IMG CACT.jpeg" alt="Vestido Floral - Foto 2">
+      <!-- Adicione mais fotos se quiser -->
+    </div>
+    <div class="especificacoes">
+      <h2>Vestido Floral</h2>
+      <ul>
+        <li>Tecido: Viscose premium</li>
+        <li>Tamanhos: P, M, G, GG</li>
+        <li>Cores: Floral colorido</li>
+        <li>Comprimento: Midi</li>
+        <li>Preço: R$ 89,90</li>
+      </ul>
+      <p>Vestido leve, confortável e perfeito para dias quentes. Ideal para passeios, festas e eventos casuais.</p>
+    </div>
+    <a href="catalogo.html" class="voltar">Voltar ao Catálogo</a>
+  </div>
+</body>
+</html>

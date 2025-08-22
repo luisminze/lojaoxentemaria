@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Loja Oxente Maria</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contato-container {
+      max-width: 600px;
+      margin: 120px auto 40px auto;
+      background: #fffbe6;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      padding: 48px 32px;
+      text-align: center;
+    }
+    .contato-container h1 {
+      color: #c0392b;
+      font-size: 2.2em;
+      margin-bottom: 24px;
+      letter-spacing: 2px;
+    }
+    .contato-container p {
+      font-size: 1.1em;
+      color: #333;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+    .contato-container .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    }
+    .contato-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .contato-form input, .contato-form textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    .contato-form button {
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      padding: 10px 0;
+      border-radius: 6px;
+      font-size: 1.1em;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+    .contato-form button:hover {
+      background: #eea76c;
+    }
+    .voltar {
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 16px;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .voltar:hover {
+      background: #eea76c;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Loja Oxente Maria</div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="catalog.html">Catálogo</a>
+      <a href="contact.html">Contato</a>
+      <a href="about.html">Sobre</a>
+    </nav>
+    <button class="login">Login</button>
+  </header>
+
+  <main>
+    <div class="contato-container">
+      <img src="logo.png" alt="Logo Loja" class="logo">
+      <h1>Fale Conosco</h1>
+      <p>Entre em contato pelas nossas redes sociais:</p>
+      <div style="display:flex;justify-content:center;gap:32px;margin:32px 0;">
+        <a href="https://instagram.com/lojaoxentemaria_" target="_blank" style="text-decoration:none;">
+          <img src="instagram.png" alt="Instagram" style="width:48px;height:48px;">
+          <div style="color:#c0392b;font-weight:bold;margin-top:8px;">Instagram</div>
+        </a>
+        <a href="https://wa.me/5599999999999" target="_blank" style="text-decoration:none;">
+          <img src="whatsapp.png" alt="WhatsApp" style="width:48px;height:48px;">
+          <div style="color:#c0392b;font-weight:bold;margin-top:8px;">WhatsApp</div>
+        </a>
+      </div>
+      <a href="index.html" class="voltar">Voltar ao Início</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 - Loja Oxente Maria. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

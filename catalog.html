@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Loja Oxente Maria</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <style>
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      padding: 40px;
+      background: #fafafa;
+    }
+    .produto {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 16px;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .produto:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .produto img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .produto .nome {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .produto .preco {
+      color: #c0392b;
+      font-size: 1em;
+      margin-bottom: 8px;
+    }
+    .produto button {
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.2s;
+    }
+    .produto button:hover {
+      background: #a93226;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Loja Oxente Maria</div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="catalog.html">Catálogo</a>
+      <a href="contact.html">Contato</a>
+      <a href="about.html">Sobre</a>
+    </nav>
+    <button class="login">Login</button>
+  </header>
+
+  <main>
+    <h1 style="text-align:center; margin-top:32px;">Catálogo de Produtos</h1>
+    <div style="max-width:600px; margin:24px auto; text-align:center;">
+      <input type="text" id="filtro-produto" placeholder="Pesquisar produto..." style="width:70%; padding:8px; border-radius:4px; border:1px solid #ccc; font-size:1em;">
+    </div>
+    <div id="categorias" style="display:flex;justify-content:center;gap:18px;margin-bottom:32px;">
+      <button class="categoria-btn" data-categoria="todos" style="background:#c0392b;color:#fff;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-weight:bold;">Todos</button>
+      <button class="categoria-btn" data-categoria="vestido" style="background:#eea76c;color:#fff;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-weight:bold;">Vestidos</button>
+      <button class="categoria-btn" data-categoria="blusa" style="background:#eea76c;color:#fff;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-weight:bold;">Blusas</button>
+      <button class="categoria-btn" data-categoria="saia" style="background:#eea76c;color:#fff;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-weight:bold;">Saias</button>
+    </div>
+    <section class="catalogo">
+      <div class="produto" data-nome="Vestido Floral" data-preco="89.90" data-categoria="vestido" data-estoque="5">
+        <img src="../media/IMG CACT.jpeg" alt="Produto 1">
+        <div class="nome">Vestido Floral</div>
+        <div class="preco">R$ 89,90</div>
+        <input type="number" class="quantidade-input" min="1" value="1" style="width:60px;margin-bottom:6px;">
+        <button class="add-carrinho">Adicionar ao Carrinho</button>
+        <span class="estoque-info" style="display:block;margin-top:6px;color:#888;font-size:0.95em;">Estoque: 5</span>
+        <a href="produto-vestido-floral.html" class="ver-detalhes" style="display:block;margin-top:10px;"><button style="width:100%;background:#c0392b;color:#fff;border:none;padding:8px 0;border-radius:4px;cursor:pointer;">Ver Detalhes</button></a>
+      </div>
+      <div class="produto" data-nome="Blusa Estampada" data-preco="49.90" data-categoria="blusa" data-estoque="3">
+        <img src="../media/IMG CACT.jpeg" alt="Produto 2">
+        <div class="nome">Blusa Estampada</div>
+        <div class="preco">R$ 49,90</div>
+        <input type="number" class="quantidade-input" min="1" value="1" style="width:60px;margin-bottom:6px;">
+        <button class="add-carrinho">Adicionar ao Carrinho</button>
+        <span class="estoque-info" style="display:block;margin-top:6px;color:#888;font-size:0.95em;">Estoque: 3</span>
+      </div>
+      <div class="produto" data-nome="Saia Jeans" data-preco="59.90" data-categoria="saia" data-estoque="2">
+        <img src="../media/IMG CACT.jpeg" alt="Produto 3">
+        <div class="nome">Saia Jeans</div>
+        <div class="preco">R$ 59,90</div>
+        <input type="number" class="quantidade-input" min="1" value="1" style="width:60px;margin-bottom:6px;">
+        <button class="add-carrinho">Adicionar ao Carrinho</button>
+        <span class="estoque-info" style="display:block;margin-top:6px;color:#888;font-size:0.95em;">Estoque: 2</span>
+      </div>
+      <div class="produto" data-nome="Cropped" data-preco="59.90" data-categoria="saia" data-estoque="1">
+        <img src="../media/IMG CACT.jpeg" alt="Produto 3">
+        <div class="nome">Cropped</div>
+        <div class="preco">R$ 59,90</div>
+        <input type="number" class="quantidade-input" min="1" value="1" style="width:60px;margin-bottom:6px;">
+        <button class="add-carrinho">Adicionar ao Carrinho</button>
+        <span class="estoque-info" style="display:block;margin-top:6px;color:#888;font-size:0.95em;">Estoque: 1</span>
+      </div>
+      <!-- Adicione mais produtos conforme desejar -->
+    </section>
+    <section class="carrinho-area" style="max-width:600px; margin:40px auto; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:24px;">
+      <h2>Carrinho de Compras</h2>
+      <ul id="carrinho-lista" style="list-style:none; padding:0; margin-bottom:16px;"></ul>
+      <div id="carrinho-total" style="font-weight:bold; font-size:1.1em; margin-bottom:16px;">Total: R$ 0,00</div>
+      <button id="finalizar-compra" style="background:#c0392b; color:#fff; border:none; padding:8px 16px; border-radius:4px; cursor:pointer; font-size:1em;">Finalizar Compra</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 - Loja Oxente Maria. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
